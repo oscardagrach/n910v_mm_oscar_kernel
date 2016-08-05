@@ -1687,8 +1687,8 @@ static __ref int do_freq_mitigation(void *data)
 			min_freq_req = max(min_freq_limit,
 					cpus[cpu].user_min_freq);
 
-			if (cpus[cpu].limited_max_freq > 2649600)
-				cpus[cpu].limited_max_freq = 2649600;
+			if (cpus[cpu].limited_max_freq > 2803200)
+				cpus[cpu].limited_max_freq = 2803200;
 
 			if (skip_mitig && cpus[cpu].limited_max_freq &&
 				cpus[cpu].limited_max_freq > max_freq_req) {
