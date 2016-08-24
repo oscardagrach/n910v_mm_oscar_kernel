@@ -123,6 +123,17 @@ config CPU_FREQ_DEFAULT_GOV_YANKACTIVE
 	   loading your cpufreq low-level hardware driver, using the
 	   'yankactive' governor for latency-sensitive workloads.
 
+config CPU_FREQ_DEFAULT_GOV_NIGHTMARE
+		bool "nightmare"
+		select CPU_FREQ_GOV_NIGHTMARE
+		help
+
+config CPU_FREQ_DEFAULT_GOV_ZZMOOVE
+		bool "zzmoove"
+		select CPU_FREQ_GOV_ZZMOOVE
+		help
+		Use the CPUFreq governor 'zzmoove' as default.
+
 endchoice
 
 config CPU_FREQ_GOV_PERFORMANCE
@@ -229,6 +240,14 @@ config CPU_FREQ_GOV_YANKACTIVE
 	  The governor is based on interactive with just different default settings
 	  and can be achieved using interactive with a script. This is added for
 	  simplification purposes for myself.
+
+config CPU_FREQ_GOV_NIGHTMARE
+		tristate "'nightmare' cpufreq governor"
+		depends on CPU_FREQ
+
+config CPU_FREQ_GOV_ZZMOOVE
+		tristate "'zzmoove' cpufreq governor"
+		depends on CPU_FREQ
 
 config CPU_BOOST
 	tristate "Event base short term CPU freq boost"
