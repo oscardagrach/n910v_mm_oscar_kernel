@@ -157,7 +157,7 @@ static void max77843_fg_periodic_read(struct max77843_fuelgauge_data *fuelgauge)
 			i = 10;
 	}
 
-	pr_info("[FG] %s\n", str);
+//	pr_info("[FG] %s\n", str);
 
 	kfree(str);
 }
